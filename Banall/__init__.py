@@ -4,9 +4,9 @@ import logging
 import os
 
 
-STARTED = 'ʙʟᴀᴄᴋ ᴍᴀɢɪᴄ ʙᴇɢɪɴs  ʙʏ @itz_mst_boy...'
-FINISH = 'ᴅᴏɴᴇ, {} ᴜsᴇʀs  ᴡᴇʀᴇ  ʀᴇᴍᴏᴠᴇᴅ  ғʀᴏᴍ  ɢʀᴏᴜᴘ'
-ERROR = 'sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ  ᴡʀᴏɴɢ  ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ᴏʀ ᴇʟsᴇ ʀᴇᴘᴏʀᴛ ᴀᴛ @worldwide_friend_zone.\n\n**{}** !'
+STARTED = 'ʙᴏᴏᴍ⚡, ꜰᴜᴄᴋɪɴɢ ᴛʜɪꜱ ᴄʀᴇᴀᴘʏ ᴄʟᴀɴ ʙʏ @jashxn_69 ...'
+FINISH = 'ꜰᴜᴄᴋᴇᴅ ᴜᴘ, {} ᴜsᴇʀs  ᴡᴇʀᴇ  ʀᴇᴍᴏᴠᴇᴅ  ꜰʀᴏᴍ ᴛʜɪꜱ ᴄʀᴇᴀᴘʏ ᴄʟᴀɴ'
+ERROR = 'sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ  ᴡʀᴏɴɢ  ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ᴏʀ ᴇʟsᴇ ʀᴇᴘᴏʀᴛ ᴛᴏ @jashxn_69.\n\n**{}** !'
 
 
 class Config:
