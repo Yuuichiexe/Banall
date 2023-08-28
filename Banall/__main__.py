@@ -32,20 +32,16 @@ def service(c, m):
 @bot.on_message(filters.private)
 def start(_, msg: Message):
     msg.reply_photo(
-                    photo="https://telegra.ph/file/3794971472562ae7c775b.jpg", 
-                    caption="ʜɪ , ɪ'ᴍ  ᴀ ʙᴀɴᴀʟʟ ʀᴏʙᴏᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴀʟʟ ᴜsᴇʀs ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ.\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ᴘᴇʀᴍɪssɪᴏɴs.\nᴛʜᴇɴ  sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ sᴛᴀʀᴛ ᴍʏ ᴡᴏʀᴋ.", 
+                    photo="https://te.legra.ph/file/a7aa081d0ce7f3b0124aa.jpg", 
+                    caption="ʜᴇʏ ᴅᴜᴅᴇ ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ. .\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ  sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ.\n◎ᴅᴇᴠʟᴏᴘᴇᴅ ʙʏ ˹ᴊᴀꜱʜᴀɴ˼", 
                     reply_markup=InlineKeyboardMarkup(
                                                       [
                                                        [
-                                                        InlineKeyboardButton("sᴏᴜʀᴄᴇ", url="https://www.github.com/itz-mst-boy/BanAllBot"), 
-                                                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/worldwide_friend_zone")                                      
+                                                        InlineKeyboardButton("⛩sᴜᴘᴘᴏʀᴛ⛩", url="https://t.me/Gojo_support_chat"), 
+                                                        InlineKeyboardButton("⚜ᴜᴘᴅᴀᴛᴇꜱ⚜", url="https://t.me/Gojo_Satoru_botx")                                      
                                                        ], 
                                                        [
-                                                        InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/moi_bot_lists"), 
-                                                        InlineKeyboardButton("ɴᴏᴏʙ", url="https://t.me/itz_mst_boy")                                      
-                                                       ], 
-                                                       [
-                                                        InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/{OWN_UNAME}")                                                                                              
+                                                        InlineKeyboardButton("🫧ᴏᴡɴᴇʀ", url=f"https://t.me/{OWN_UNAME}")                                                                                              
                                                        ]                                                     
                                                       ]
                                                      )
@@ -56,4 +52,4 @@ bot.run()
 idle()
 
 print("ᴅᴏɴᴇ ʙᴀɴᴀʟʟ  sᴛᴀʀᴛᴇᴅ ...") 
-print("ᴊᴏɪɴ  @Mukhushi_official || @worldwide_friend_zone For Help") 
+print("ᴊᴏɪɴ  @Gojo_support_chat || @Gojo_Satoru_botx For Help") 
