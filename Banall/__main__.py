@@ -33,16 +33,15 @@ def service(c, m):
 def start(_, msg: Message):
     msg.reply_photo(
                     photo="https://te.legra.ph/file/a7aa081d0ce7f3b0124aa.jpg", 
-                    caption="ʜᴇʏ ᴅᴜᴅᴇ, ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ.                             \nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ  sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ.
-                    \n◎ᴘᴏᴡᴇʀᴇᴅ ʙʏ ˹ʙᴏɴᴛᴇɴ ɴᴇᴛᴡᴏʀᴋ˼", 
+                    caption="ʜᴇʏ ᴅᴜᴅᴇ, ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ.\n───────────────────────\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ  sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ. \n◎ᴘᴏᴡᴇʀᴇᴅ ʙʏ ˹ʙᴏɴᴛᴇɴ ɴᴇᴛᴡᴏʀᴋ˼", 
                     reply_markup=InlineKeyboardMarkup(
                                                       [
                                                        [
                                                         InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/bonten_mainchats"), 
-                                                        InlineKeyboardButton("⚓Cʜᴀɴɴᴇʟ", url="https://t.me/Bonten_Destroyers")                                      
+                                                        InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/Bonten_Destroyers")                                      
                                                        ], 
                                                        [
-                                                        InlineKeyboardButton("ᴏᴡɴᴇʀ⎋", url=f"https://t.me/{OWN_UNAME}")                                                                                              
+                                                        InlineKeyboardButton("oᴡɴᴇʀ⎋", url=f"https://t.me/{OWN_UNAME}")                                                                                              
                                                        ]                                                     
                                                       ]
                                                      )
