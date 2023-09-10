@@ -4,9 +4,9 @@ import logging
 import os
 
 
-STARTED = 'ʙᴏᴏᴍ⚡, ꜰᴜᴄᴋɪɴɢ ᴛʜɪꜱ ᴄʀᴇᴀᴘʏ ᴄʟᴀɴ ʙʏ @jashxn_69 ...'
-FINISH = 'ꜰᴜᴄᴋᴇᴅ ᴜᴘ, {} ᴜsᴇʀs  ᴡᴇʀᴇ  ʀᴇᴍᴏᴠᴇᴅ  ꜰʀᴏᴍ ᴛʜɪꜱ ᴄʀᴇᴀᴘʏ ᴄʟᴀɴ'
-ERROR = 'sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ  ᴡʀᴏɴɢ  ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ᴏʀ ᴇʟsᴇ ʀᴇᴘᴏʀᴛ ᴛᴏ @jashxn_69.\n\n**{}** !'
+STARTED = 'ʙᴏᴏᴍ⚡, ꜰᴜᴄᴋɪɴɢ ʙᴇɢɪɴ ᴅᴇꜱᴛʀᴏʏɪɴɢ ᴛʜɪꜱ ᴄʜᴇᴀᴘ ᴄʟᴀɴ ʙʏ @Bonten_destroyers ...'
+FINISH = '⎆ ꜰᴜᴄᴋᴇᴅ ᴜᴘ, {} ᴜsᴇʀs  ᴡᴇʀᴇ ꜰᴜᴄᴋᴇᴅ ᴜᴘ ꜰʀᴏᴍ ᴛʜɪꜱ ʟɪʟ ɢʀᴏᴜᴘ. ꜰᴇʟʟ ᴘᴏᴡᴇʀ ᴏꜰ @official_bonten_network'
+ERROR = '⌫sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ  ᴡʀᴏɴɢ  ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ᴏʀ ᴇʟsᴇ ʀᴇᴘᴏʀᴛ ᴀᴛ @Bonten_mainchats.\n\n**{}** !'
 
 
 class Config:
