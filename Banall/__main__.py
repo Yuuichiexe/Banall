@@ -9,7 +9,7 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(bot.get_me().id)
-    if chat.get_member(msg.from_user.id).can_manage_chat and me.can_restrict_members and me.can_delete_messages:
+    if chat.get_member(msg.from_user.id) and me.can_restrict_members and me.can_delete_messages:
         try:
             msg.reply(STARTED.format(chat.members_count))
             count_kicks = 0
