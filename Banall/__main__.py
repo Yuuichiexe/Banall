@@ -36,7 +36,7 @@ def service(_, msg: Message):
 def start(_, msg: Message):
     msg.reply_photo(
         photo="https://te.legra.ph/file/a7aa081d0ce7f3b0124aa.jpg",
-        caption="ʜᴇʏ ᴅᴜᴅᴇ, ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ.\n───────────────────────\n► ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ ⥬ `{pver}` \n\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ. \n◎ᴘᴏᴡᴇʀᴇᴅ ʙʏ ˹ʙᴏɴᴛᴇɴ ɴᴇᴛᴡᴏʀᴋ˼",
+        caption="ʜᴇʏ ᴅᴜᴅᴇ, ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ.\n───────────────────────\n► ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ ⥬ `2.0.106` \n\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ. \n◎ᴘᴏᴡᴇʀᴇᴅ ʙʏ ˹ʙᴏɴᴛᴇɴ ɴᴇᴛᴡᴏʀᴋ˼",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [    
@@ -56,7 +56,7 @@ def start(_, msg: Message):
 
 @bot.on_callback_query(filters.regex("help_command"))
 def help_command_handler(_, callback_query):
-    callback_query.answer("Check your private messages.")
+    callback_query.answer("ꜱᴄʀᴏʟʟ ᴀɴᴅ ᴄʜᴇᴄᴋ ʜᴇʟᴘ ᴛᴇxᴛ.")
     callback_query.message.delete()
     bot.send_message(
         callback_query.from_user.id,
