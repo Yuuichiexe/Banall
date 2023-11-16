@@ -55,20 +55,24 @@ def help_command_handler(_, callback_query):
     callback_query.message.delete()
     bot.send_message(
         callback_query.from_user.id,
-        "Here are the available commands:\n\n"
-        "/banall - Ban all members in the group (Admin only).\n"
-        "/start - Start the bot in private chat.\n"
-        "/ping - Check bot's uptime and speed.\n\n"
-        "For further assistance or support, join our [Support Chat](https://t.me/bonten_mainchats) "
-        "or check our [Channel](https://t.me/Bonten_Destroyers).",
+        "ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜰᴏʀ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ:\n\n"
+        "───────────────────────\n"
+        "/banall ⥬ ʙᴀɴᴀʟʟ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.\n"
+        "/start ⥬ ᴊᴜꜱᴛ ꜱɪᴍᴘʟᴇ ᴄᴍᴅ ᴛᴏ ꜱᴛᴀʀᴛ ʙᴏᴛ ᴛʜᴇ ʙᴏᴛ .\n"
+        "/ping ⥬ ᴄʜᴇᴄᴋ ᴀɪ'ꜱ ᴜᴘᴛɪᴍᴇ ᴀɴᴅ ꜱᴘᴇᴇᴅ.\n"
+        "───────────────────────\n\n"
+        "ꜰᴏʀ ꜰᴜʀᴛʜᴇʀ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ ᴊᴏɪɴ ᴏᴜʀ [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/bonten_mainchats) "\n
+        "ᴀʟꜱᴏ ᴄʜᴇᴄᴋ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ [ᴄʜᴀɴɴᴇʟ](https://t.me/Bonten_Destroyers).",
         disable_web_page_preview=True
     )
 
 @bot.on_message(filters.command("ping"))
 def ping(_, msg: Message):
     uptime = round(time.time() - start_time)
-    ping = bot.get_me().ping_time
-    msg.reply(f"🏓 **Pong!**\n\nUptime: `{uptime // 60}m {uptime % 60}s`\nPing: `{ping}ms`")
+    start = datetime.now()
+    end = datetime.now()
+    ms = (end-start).microseconds / 1000
+    msg.reply(f"🏓 **Pong!**\n\nUptime: `{uptime // 60}m {uptime % 60}s`\nPing: `{ms}ms`")
 
 bot.run()
 idle()
