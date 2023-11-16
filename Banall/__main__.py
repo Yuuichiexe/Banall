@@ -61,7 +61,7 @@ def help_command_handler(_, callback_query):
         "/start ⥬ ᴊᴜꜱᴛ ꜱɪᴍᴘʟᴇ ᴄᴍᴅ ᴛᴏ ꜱᴛᴀʀᴛ ʙᴏᴛ ᴛʜᴇ ʙᴏᴛ .\n"
         "/ping ⥬ ᴄʜᴇᴄᴋ ᴀɪ'ꜱ ᴜᴘᴛɪᴍᴇ ᴀɴᴅ ꜱᴘᴇᴇᴅ.\n"
         "───────────────────────\n\n"
-        "ꜰᴏʀ ꜰᴜʀᴛʜᴇʀ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ ᴊᴏɪɴ ᴏᴜʀ [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/bonten_mainchats) "\n
+        "ꜰᴏʀ ꜰᴜʀᴛʜᴇʀ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ ᴊᴏɪɴ ᴏᴜʀ [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/bonten_mainchats) \n"
         "ᴀʟꜱᴏ ᴄʜᴇᴄᴋ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ [ᴄʜᴀɴɴᴇʟ](https://t.me/Bonten_Destroyers).",
         disable_web_page_preview=True
     )
