@@ -12,9 +12,11 @@
 ꜱᴏ Ᏼคɴᴀʟʟ 𝙱ᴏᴛ [⚡️] ɪꜱ 𝙰ɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ ꜰᴏʀ ᴅᴇꜱᴛʀᴏʏɪɴɢ ᴛᴏxɪᴄ ɢʀᴏᴜᴘ'ꜱ
 </h4>
 
-<p>
 
-<a href="https://t.me/fatherOFpaul"> ᴅᴇᴠᴇʟᴏᴘᴇʀ </a>     
+<p align="center">
+<a href="https://t.me/fatherOFpaul"><img src="https://img.shields.io/badge/-developer-Red.svg?style=for-the-badge"></a>
+</p>
+ 
  </p>
 <p align="center">
 <a href="https://telegram.me/bonten_mainchats"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
