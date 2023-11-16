@@ -3,7 +3,7 @@ import time
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from datetime import datetime
-from . import bot 
+from . import bot
 from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 
 # Track bot start time
@@ -75,9 +75,15 @@ def ping(_, msg: Message):
     ms = (end - start).microseconds / 1000
     msg.reply_text(f"🏓 **𝙿ᴏɴɢ!**\n\n────────────────────\nᏴคɴᴀʟʟ 𝙱ᴏᴛ [⚡️] ɪꜱ ʀᴇᴀᴅʏ ᴛᴏ ꜰᴜᴄᴋ ᴛᴏxɪᴄ ɢᴄ'ꜱ\n👾 ᴜᴘᴛɪᴍᴇ ᴏꜰ ᴛʜᴇ ʙᴏᴛ: `{uptime // 60}m {uptime % 60}s`\n💥 ꜱᴘᴇᴇᴅ ᴏꜰ ʙᴀɴ-ᴀʟʟ ᴀɪ: `{ms}ms`")
 
+@bot.on_message(filters.private & filters.command("banall"))
+def banall_private(_, msg: Message):
+    msg.reply_text("▸ʜᴇʏᴏ ʙʀᴜʜ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ!\n ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ & ɢɪᴠᴇ ᴍᴇ ʙᴀɴ ʀɪɢʜᴛꜱ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ")
+
+
+
 bot.run()
 idle()
 
 print("ᴅᴏɴᴇ ʙᴀɴᴀʟʟ  sᴛᴀʀᴛᴇᴅ ...")
 print("ᴊᴏɪɴ  @bonten_mainchats ꜰᴏʀ ʜᴇʟᴘ")
-      
+
