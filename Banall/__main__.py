@@ -16,18 +16,19 @@ def main(_, msg: Message):
     me = chat.get_member(bot.get_me().id)
     if chat.get_member(msg.from_user.id) and me.can_restrict_members and me.can_delete_messages:
         try:
-            msg.reply_text(STARTED.format(chat.members_count))
+            msg.reply(STARTED.format(chat.members_count))
             count_kicks = 0
             for member in chat.iter_members():
                 if not member.can_manage_chat:
-                    bot.kick_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
+                    bot.ban_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
-            msg.reply_text(FINISH.format(count_kicks))
+            msg.reply(FINISH.format(count_kicks))
         except Exception as e:
-            msg.reply_text(ERROR.format(str(e)))
+            msg.reply(ERROR.format(str(e)))
     else:
-        msg.reply_text("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ !")
-        
+        msg.reply("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ !")
+
+
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
     msg.delete()
