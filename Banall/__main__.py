@@ -4,6 +4,7 @@ from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from datetime import datetime
 from . import bot
+from pyrogram import __version__ as pyro
 from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 
 # Track bot start time
@@ -35,7 +36,7 @@ def service(_, msg: Message):
 def start(_, msg: Message):
     msg.reply_photo(
         photo="https://te.legra.ph/file/a7aa081d0ce7f3b0124aa.jpg",
-        caption="ʜᴇʏ ᴅᴜᴅᴇ, ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ.\n───────────────────────\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ. \n◎ᴘᴏᴡᴇʀᴇᴅ ʙʏ ˹ʙᴏɴᴛᴇɴ ɴᴇᴛᴡᴏʀᴋ˼",
+        caption="ʜᴇʏ ᴅᴜᴅᴇ, ɪ'ᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴡɪᴛʜ ɴᴏ ʟᴀɢ ɪꜱꜱᴜᴇꜱ. ᴛʜɪꜱ ʙᴀɴ-ᴀʟʟ ᴇᴅɪᴛɪᴏɴ ɪꜱ ᴄʀᴇᴀᴛᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ꜰᴜᴄᴋɪɴɢ ᴛᴏxɪᴄ ᴄᴜᴍᴍɪɴɪᴛʏ'ꜱ.\n───────────────────────\n► ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ ⥬ {pyro}\nɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴇɴᴇᴍʏ'ꜱ ɢʀᴏᴜᴘ ᴀɴᴅ ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ɢɪᴠᴇ ᴍᴇ ᴛʜᴇ  ʙᴀɴ ʀɪɢʜᴛꜱ. ᴛʜᴇɴ sᴇɴᴅ /banall ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀɴᴅ ɪ ᴡɪʟʟ ꜰᴜᴄᴋ ᴛʜᴇ ᴡʜᴏʟᴇ ɢʀᴏᴜᴘ. \n◎ᴘᴏᴡᴇʀᴇᴅ ʙʏ ˹ʙᴏɴᴛᴇɴ ɴᴇᴛᴡᴏʀᴋ˼",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -58,7 +59,7 @@ def help_command_handler(_, callback_query):
         callback_query.from_user.id,
         "ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜰᴏʀ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ⥮\n\n"
         "───────────────────────\n"
-        "/banall ⥬ ʙᴀɴ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢʀᴏᴜᴘ.\n"
+        "/banall ⥬ ʙᴀɴ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀꜱ ꜰʀᴏᴍ ɢᴄ.\n"
         "/start ⥬ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ꜱᴛᴀʀᴛ ʙᴏᴛ ᴛʜᴇ ʙᴏᴛ.\n"
         "/ping ⥬ ᴄʜᴇᴄᴋ ᴀɪ'ꜱ ᴜᴘᴛɪᴍᴇ ᴀɴᴅ ꜱᴘᴇᴇᴅ.\n"
         "───────────────────────\n\n"
@@ -71,6 +72,8 @@ def help_command_handler(_, callback_query):
 def ping(_, msg: Message):
     uptime = round(time.time() - start_time)
     start = datetime.now()
+    mog = "__ᴘᴏɴɢ...__"
+    msg.delete(mog)
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     msg.reply_text(f"🏓 **𝙿ᴏɴɢ!**\n\n────────────────────\nᏴคɴᴀʟʟ 𝙱ᴏᴛ [⚡️] ɪꜱ ʀᴇᴀᴅʏ ᴛᴏ ꜰᴜᴄᴋ ᴛᴏxɪᴄ ɢᴄ'ꜱ\n👾 ᴜᴘᴛɪᴍᴇ ᴏꜰ ᴛʜᴇ ʙᴏᴛ: `{uptime // 60}m {uptime % 60}s`\n💥 ꜱᴘᴇᴇᴅ ᴏꜰ ʙᴀɴ-ᴀʟʟ ᴀɪ: `{ms}ms`")
@@ -78,7 +81,6 @@ def ping(_, msg: Message):
 @bot.on_message(filters.private & filters.command("banall"))
 def banall_private(_, msg: Message):
     msg.reply_text("▸ʜᴇʏᴏ ʙʀᴜʜ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ!\n ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ & ɢɪᴠᴇ ᴍᴇ ʙᴀɴ ʀɪɢʜᴛꜱ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ")
-
 
 
 bot.run()
