@@ -27,7 +27,7 @@ def main(_, msg: Message):
             msg.reply_text(ERROR.format(str(e)))
     else:
         msg.reply_text("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ !")
-
+        
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
     msg.delete()
