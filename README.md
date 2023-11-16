@@ -1,26 +1,23 @@
-# ʙᴀɴ-ᴀʟʟ-ʙᴏᴛ 
+# Ᏼคɴᴀʟʟ 𝙱ᴏᴛ [⚡️]
 
-ʙᴇғᴏʀᴇ ғᴏʀᴋɪɴɢ ɢɪᴠᴇ  💫  ɪᴛ ᴍᴇᴀɴs ᴀ ʟᴏᴛ ғʀᴏᴍ ᴜ ɢᴜʏs.
-<p align="center"><img src="https://telegra.ph/file/3cdb65b6d72babdb39941.jpg" alt="ICON" width="250" height="250"/></p>
+<p align="center"><img src="https://telegra.ph/file/c3b9e59561af499945d80.jpg" alt="ICON" width="250" height="250"/></p>
 
+
+# ɪɴꜰᴏ 
 
 <h4 align="center">
-    ᴀ  ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴅɪsᴛʀᴜᴄᴛɪᴠᴇ ʙᴏᴛ ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴜsɪɴɢ ᴘʀᴏɢʀᴀᴍ  ᴡɪᴛʜ ᴍᴜᴄʜ ғᴇᴀᴛᴜʀᴇs ᴀɴᴅ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʀᴇɢᴜʟᴀʀʟʏ
+ꜱᴏ Ᏼคɴᴀʟʟ 𝙱ᴏᴛ [⚡️] ɪꜱ 𝙰ɴ ᴀᴅᴠᴀɴᴄᴇ & ᴘᴏᴡᴇʀꜰᴜʟ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ ᴏꜰ ᴛᴇʟᴇɢʀᴀᴍ ꜰᴏʀ ᴅᴇꜱᴛʀᴏʏɪɴɢ ᴛᴏxɪᴄ ɢʀᴏᴜᴘ'ꜱ
 </h4>
 
 <p>
 
-<a href="https://t.me/itz_mst_boy"> ɴᴏᴏʙ ᴄʀᴇᴀᴛᴏʀ </a>     
-    <a href="https://t.me/mr_sukkun"> sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ </a> •
-    <a href="https://t.me/worldwide_friend_zone"> sᴜᴘᴘᴏʀᴛ  ᴄʜᴀᴛ  </a> 
+<a href="https://t.me/fatherOFpaul"> ᴅᴇᴠᴇʟᴏᴘᴇʀ </a>     
+    <a href="https://t.me/bonten_mainchats"> sᴜᴘᴘᴏʀᴛ</a> 
  </p>
 
 
-## ᴅᴇᴘʟᴏʏ
+## ᴅᴇᴘʟᴏʏ ʏᴏᴜʀ ᴏᴡɴ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ [ꜱᴇʀᴠᴇʀ⥥]
 
 
-[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Itz-mst-boy/BanAllBot)
+[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yuuichiexe/Banallprobot)
 
-### ᴄᴏᴅᴇ ᴄʀᴇᴀᴛᴏʀ 
-
-[ᴏᴡɴᴇʀ](https://t.me/itz_mst_boy)
