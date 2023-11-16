@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://te.legra.ph/file/31077a464a4ca165eb8bc.jpg">
+  <img src="https://telegra.ph/file/c3b9e59561af499945d80.jpg">
 </p>
 
 # ɪɴꜰᴏ 
@@ -15,8 +15,10 @@
 <p>
 
 <a href="https://t.me/fatherOFpaul"> ᴅᴇᴠᴇʟᴏᴘᴇʀ </a>     
-    <a href="https://t.me/bonten_mainchats"> sᴜᴘᴘᴏʀᴛ</a> 
  </p>
+<p align="center">
+<a href="https://telegram.me/bonten_mainchats"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+</p>
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ## ᴅᴇᴘʟᴏʏ ʏᴏᴜʀ ᴏᴡɴ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ [ꜱᴇʀᴠᴇʀ⥥]
