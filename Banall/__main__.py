@@ -38,12 +38,12 @@ def start(_, msg: Message):
                     reply_markup=InlineKeyboardMarkup(
                                                       [
                                                        [
-                                                        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/bonten_mainchats"), 
-                                                        InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/Bonten_Destroyers")                                      
+                                                        InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/bonten_mainchats"), 
+                                                        InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/Bonten_Destroyers")                                      
                                                        ], 
                                                        [
                                                         InlineKeyboardButton("oᴡɴᴇʀ⎋", url=f"https://t.me/{OWN_UNAME}"),
-                                                        InlineKeyboardButton("Hᴇʟᴘ", callback_data="help_command")  # Added Help Button
+                                                        InlineKeyboardButton("ꜰᴇᴀᴛᴜʀᴇꜱ", callback_data="help_command")  # Added Help Button
                                                        ]                                                     
                                                       ]
                                                      )
@@ -53,7 +53,8 @@ def start(_, msg: Message):
 def help_command_handler(_, callback_query):
     callback_query.answer("Check your private messages.")
     callback_query.message.delete()
-    callback_query.from_user.send_text(
+    bot.send_message(
+        callback_query.from_user.id,
         "Here are the available commands:\n\n"
         "/banall - Ban all members in the group (Admin only).\n"
         "/start - Start the bot in private chat.\n"
@@ -66,7 +67,7 @@ def help_command_handler(_, callback_query):
 @bot.on_message(filters.command("ping"))
 def ping(_, msg: Message):
     uptime = round(time.time() - start_time)
-    ping = bot.get_ping()
+    ping = bot.get_me().ping_time
     msg.reply(f"🏓 **Pong!**\n\nUptime: `{uptime // 60}m {uptime % 60}s`\nPing: `{ping}ms`")
 
 bot.run()
