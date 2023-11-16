@@ -30,7 +30,7 @@ def main(_, msg: Message):
 def service(c, m):
     m.delete()
 
-@bot.on_message(filters.private)
+@bot.on_message(filters.private & filters.command("start"))
 def start(_, msg: Message):
     msg.reply_photo(
                     photo="https://te.legra.ph/file/a7aa081d0ce7f3b0124aa.jpg", 
