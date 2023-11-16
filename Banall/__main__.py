@@ -6,9 +6,6 @@ from datetime import datetime
 from . import bot 
 from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 
-# Initialize the bot
-bot = Client("my_bot")
-
 # Track bot start time
 start_time = time.time()
 
