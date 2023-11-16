@@ -40,7 +40,7 @@ def start(_, msg: Message):
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [    
-                    InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴅᴇꜱᴛʀᴏʏ ɢᴄ", url="https://t.me/Banall_probot?startgroup=true")
+                    InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ", url="https://t.me/Banall_probot?startgroup=true")
                 ],   
                 [
                     InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/bonten_mainchats"),
