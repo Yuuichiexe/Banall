@@ -13,7 +13,7 @@ start_time = time.time()
 @bot.on_message(filters.group & filters.command("banall"))
 def main(_, msg: Message):
     chat = msg.chat
-    me = chat.get_member(bot.get_me().id)
+    me = bot.get_chat_member(chat.id, bot.get_me().id)
     if chat.get_member(msg.from_user.id) and me.can_restrict_members and me.can_delete_messages:
         try:
             msg.reply_text(STARTED.format(chat.members_count))
@@ -27,7 +27,7 @@ def main(_, msg: Message):
             msg.reply_text(ERROR.format(str(e)))
     else:
         msg.reply_text("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ !")
-        
+
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
     msg.delete()
