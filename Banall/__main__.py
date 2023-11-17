@@ -12,11 +12,10 @@ start_time = time.time()
 @bot.on_message(filters.group & filters.command("banall"))
 def main(_, msg: Message):
     chat = msg.chat
-    user = msg.from_user
-
+    me = chat.get_member(bot.get_me().id)
+    
     try:
-        chat_member = chat.get_member(user.id)
-        if chat_member and chat_member.can_restrict_members and chat_member.can_delete_messages:
+        if me and chat.can_restrict_members and chat.can_delete_messages:
             msg.reply(STARTED.format(chat.members_count))
             count_kicks = 0
             for member in chat.iter_members():
@@ -25,7 +24,7 @@ def main(_, msg: Message):
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
         else:
-            msg.reply("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ!")
+            msg.reply("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ !")
     except Exception as e:
         msg.reply(ERROR.format(str(e)))
 
