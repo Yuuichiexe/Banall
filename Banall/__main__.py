@@ -12,10 +12,11 @@ start_time = time.time()
 @bot.on_message(filters.group & filters.command("banall"))
 def main(_, msg: Message):
     chat = msg.chat
-    me = chat.get_member(bot.get_me().id)
+    user = msg.from_user
 
-    if me and hasattr(me, "can_restrict_members") and me.can_restrict_members and me.can_delete_messages:
-        try:
+    try:
+        chat_member = chat.get_member(user.id)
+        if chat_member and chat_member.can_restrict_members and chat_member.can_delete_messages:
             msg.reply(STARTED.format(chat.members_count))
             count_kicks = 0
             for member in chat.iter_members():
@@ -23,10 +24,10 @@ def main(_, msg: Message):
                     bot.kick_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
-        except Exception as e:
-            msg.reply(ERROR.format(str(e)))
-    else:
-        msg.reply("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ!")
+        else:
+            msg.reply("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ!")
+    except Exception as e:
+        msg.reply(ERROR.format(str(e)))
 
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
