@@ -4,7 +4,6 @@ from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from datetime import datetime
 from . import bot
-from pyrogram import __version__ as pver
 from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 
 # Track bot start time
@@ -20,7 +19,7 @@ def main(_, msg: Message):
             count_kicks = 0
             for member in chat.iter_members():
                 if not member.can_manage_chat:
-                    bot.ban_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
+                    bot.kick_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
         except Exception as e:
@@ -86,10 +85,8 @@ def ping(_, msg: Message):
 def banall_private(_, msg: Message):
     msg.reply_text("▸ʜᴇʏᴏ ʙʀᴜʜ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ!\n ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ & ɢɪᴠᴇ ᴍᴇ ʙᴀɴ ʀɪɢʜᴛꜱ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ")
 
-
 bot.run()
 idle()
 
 print("ᴅᴏɴᴇ ʙᴀɴᴀʟʟ  sᴛᴀʀᴛᴇᴅ ...")
 print("ᴊᴏɪɴ  @bonten_mainchats ꜰᴏʀ ʜᴇʟᴘ")
-
