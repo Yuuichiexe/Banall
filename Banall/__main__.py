@@ -12,9 +12,9 @@ start_time = time.time()
 @bot.on_message(filters.group & filters.command("banall"))
 def main(_, msg: Message):
     chat = msg.chat
-    user = msg.from_user
+    me = chat.get_member(bot.get_me().id)
 
-    if user and user.status in ["administrator", "creator"]:
+    if me and hasattr(me, "can_restrict_members") and me.can_restrict_members and me.can_delete_messages:
         try:
             msg.reply(STARTED.format(chat.members_count))
             count_kicks = 0
