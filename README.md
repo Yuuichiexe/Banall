@@ -26,5 +26,5 @@
 ## ᴅᴇᴘʟᴏʏ ʏᴏᴜʀ ᴏᴡɴ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ [ꜱᴇʀᴠᴇʀ⥥]
 
 
-[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yuuichiexe/Banallprobot)
+[![ᴅᴇᴘʟᴏʏ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yuuichiexe/Banall)
 
