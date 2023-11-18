@@ -1,4 +1,4 @@
-jimport os
+import os
 import time
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatPermissions
