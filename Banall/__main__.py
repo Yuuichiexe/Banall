@@ -19,7 +19,7 @@ def main(_, msg: Message):
             members = bot.get_chat_members(msg.chat.id)
             for member in members:
                 if member.status not in ("administrator", "creator"):
-                    bot.ban_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
+                    bot.chat.ban_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
         else:
