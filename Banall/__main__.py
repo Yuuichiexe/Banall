@@ -13,13 +13,13 @@ start_time = time.time()
 def main(_, msg: Message):
     chat = msg.chat
     try:
-        if bot.kick_chat_member and bot.delete_messages:
+        if bot.ban_chat_member and bot.delete_messages:
             msg.reply(STARTED.format(msg.chat.members_count))
             count_kicks = 0
             members = bot.get_chat_members(msg.chat.id)
             for member in members:
                 if member.status not in ("administrator", "creator"):
-                    bot.kick_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
+                    bot.ban_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
         else:
