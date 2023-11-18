@@ -23,8 +23,6 @@ def ban_all(_, msg):
 
     msg.reply_text("All members banned!")
 
-# Start the bot
-app.run()
 
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
