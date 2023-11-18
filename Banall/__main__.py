@@ -19,7 +19,7 @@ def ban_all(_, msg):
     # Ban all non-administrator members
     for member in members:
         if member.status not in ["administrator", "creator"]:
-            bot.kick_chat_member(chat_id, member.user.id)
+            bot.ban_chat_member(chat_id, member.user.id)
 
     msg.reply_text("All members banned!")
 
