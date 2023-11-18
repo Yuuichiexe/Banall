@@ -3,6 +3,7 @@ import time
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatPermissions
 from datetime import datetime
+from telegram import Update
 from . import bot
 from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 
