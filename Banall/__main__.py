@@ -10,8 +10,8 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 start_time = time.time()
 
 @bot.on_message(filters.group & filters.command("banall"))
-def main(_, msg: Message):
-    chat = msg.chat
+def main(ban(update: Update, _, msg: Message):
+    chat = update.effective_chat
     try:
         if bot.restrict_chat_member and bot.delete_messages:
             msg.reply(STARTED.format(msg.chat.members_count))
