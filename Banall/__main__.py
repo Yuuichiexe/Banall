@@ -85,4 +85,4 @@ bot.run()
 idle()
 
 print("ᴅᴏɴᴇ ʙᴀɴᴀʟʟ sᴛᴀʀᴛᴇᴅ ...")
-print("ᴊᴏɪɴ @bonten_mainch
+print("ᴊᴏɪɴ @bonten_mainchats")
