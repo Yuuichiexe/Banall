@@ -10,23 +10,21 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 # Track bot start time
 start_time = time.time()
 
-@bot.on_message(filters.group & filters.command("banall"))
-def main(update: Update, _, msg: Message):
-    chat = update.effective_chat
-    try:
-        if bot.restrict_chat_member and bot.delete_messages:
-            msg.reply(STARTED.format(msg.chat.members_count))
-            count_kicks = 0
-            members = bot.get_chat_members(msg.chat.id)
-            for member in members:
-                if member.status not in ("administrator", "creator"):
-                    bot.chat.ban_member(chat_id=msg.chat.id, user_id=member.user.id)
-                    count_kicks += 1
-            msg.reply(FINISH.format(count_kicks))
-        else:
-            msg.reply("ɪ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ!")
-    except Exception as e:
-        msg.reply(ERROR.format(str(e)))
+# Define the command handler
+@bot.on_message(filters.command("banall") & filters.group)
+def ban_all(_, msg):
+    chat_id = msg.chat.id
+    members = bot.get_chat_members(chat_id)
+
+    # Ban all non-administrator members
+    for member in members:
+        if member.status not in ["administrator", "creator"]:
+            bot.kick_chat_member(chat_id, member.user.id)
+
+    msg.reply_text("All members banned!")
+
+# Start the bot
+app.run()
 
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
