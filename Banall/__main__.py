@@ -13,7 +13,7 @@ start_time = time.time()
 def main(_, msg: Message):
     chat = msg.chat
     try:
-        if bot.can_restrict_chat_member and bot.delete_messages:
+        if bot.restrict_chat_member and bot.delete_messages:
             msg.reply(STARTED.format(msg.chat.members_count))
             count_kicks = 0
             members = bot.get_chat_members(msg.chat.id)
