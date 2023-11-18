@@ -18,7 +18,7 @@ def main(_, msg: Message):
             count_kicks = 0
             members = bot.get_chat_members(msg.chat.id)
             for member in members:
-                if not member.can_manage_chat:
+                if not member.manage_chat:
                     bot.kick_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
             msg.reply(FINISH.format(count_kicks))
