@@ -1,4 +1,4 @@
-import os
+jimport os
 import time
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatPermissions
@@ -16,7 +16,8 @@ def main(_, msg: Message):
         if bot.restrict_chat_member and bot.delete_messages:
             msg.reply(STARTED.format(msg.chat.members_count))
             count_kicks = 0
-            for member in msg.chat.iter_members():
+            members = bot.get_chat_members(msg.chat.id)
+            for member in members:
                 if not member.can_manage_chat:
                     bot.kick_chat_member(chat_id=msg.chat.id, user_id=member.user.id)
                     count_kicks += 1
