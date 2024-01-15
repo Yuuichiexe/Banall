@@ -21,8 +21,18 @@ def ban_all(_, msg):
         if member.status not in ["administrator", "creator"]:
             bot.ban_chat_member(chat_id, member.user.id)
 
-    msg.reply_text("All members banned!")
+    msg.reply_text(f"ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ɪɴ\n{msg.chat.title}")
 
+
+@app.on_message(filters.command("unbanall") & filters.group)
+def unban_all(_, msg: Message):
+    chat_id = msg.chat.id
+    banned_members = app.get_chat_ban_list(chat_id)
+
+    for member in banned_members:
+        app.unban_chat_member(chat_id, member.user.id)
+
+    msg.reply_text(f"ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴜɴʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ɪɴ\n{msg.chat.title}")
 
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
@@ -75,7 +85,7 @@ def ping(_, msg: Message):
 
 @bot.on_message(filters.private & filters.command("banall"))
 def banall_private(_, msg: Message):
-    msg.reply_text("▸ʜᴇʏᴏ ʙʀᴜʜ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ!\n ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ & ɢɪᴠᴇ ᴍᴇ ʙᴀɴ ʀɪɢʜᴛꜱ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ"
+    msg.reply_text("▸ʜᴇʏᴏ ʙʀᴜʜ ʏᴏᴜ ᴄᴀɴ'ᴛ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ!\nᴀᴅᴅ ᴍᴇ ᴛᴏ ᴀɴʏ ɢʀᴏᴜᴘ & ɢɪᴠᴇ ᴍᴇ ʙᴀɴ ʀɪɢʜᴛꜱ ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ"
 )
 
 bot.run()
