@@ -24,15 +24,6 @@ def ban_all(_, msg):
     msg.reply_text("ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ")
 
 
-@bot.on_message(filters.command("unbanall") & filters.group)
-def unban_all(_, msg: Message):
-    chat_id = msg.chat.id
-    banned_members = bot.get_chat_ban_list(chat_id)
-
-    for member in banned_members:
-        bot.unban_chat_member(chat_id, member.user.id)
-
-    msg.reply_text("ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴜɴʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ")
 
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
