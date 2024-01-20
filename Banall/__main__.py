@@ -27,7 +27,7 @@ def ban_all(_, msg):
 @bot.on_message(filters.command("unbanall") & filters.group)
 def unban_all(_, msg: Message):
     chat_id = msg.chat.id
-    banned_members = app.get_chat_ban_list(chat_id)
+    banned_members = bot.get_chat_ban_list(chat_id)
 
     for member in banned_members:
         bot.unban_chat_member(chat_id, member.user.id)
