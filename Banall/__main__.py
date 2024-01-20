@@ -24,13 +24,13 @@ def ban_all(_, msg):
     msg.reply_text(f"ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ɪɴ\n{msg.chat.title}")
 
 
-@app.on_message(filters.command("unbanall") & filters.group)
+@bot.on_message(filters.command("unbanall") & filters.group)
 def unban_all(_, msg: Message):
     chat_id = msg.chat.id
     banned_members = app.get_chat_ban_list(chat_id)
 
     for member in banned_members:
-        app.unban_chat_member(chat_id, member.user.id)
+        bot.unban_chat_member(chat_id, member.user.id)
 
     msg.reply_text(f"ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴜɴʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ ɪɴ\n{msg.chat.title}")
 
