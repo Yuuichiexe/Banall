@@ -12,15 +12,15 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 start_time = time.time()
 
 
-@app.on_message(filters.command("banall") & filters.group)
+@bot.on_message(filters.command("banall") & filters.group)
 async def ban_all(_,msg):
     chat_id=msg.chat.id    
-    bot=await app.get_chat_member(chat_id,{app.id})
+    bot=await bot.get_chat_member(chat_id,{bot.id})
     bot_permission=bot.privileges.can_restrict_members==True    
     if bot_permission:
-        async for member in app.get_chat_members(chat_id):       
+        async for member in bot.get_chat_members(chat_id):       
             try:
-                    await app.ban_chat_member(chat_id, member.user.id)
+                    await bot.ban_chat_member(chat_id, member.user.id)
                     await msg.reply_text(f"ʙᴀɴɴᴇᴅ ᴀʟʟ ɴᴏɴ-ᴀᴅᴍɪɴꜱ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ.")                    
             except Exception:
                 pass
@@ -70,7 +70,7 @@ def help_command_handler(_, callback_query):
 def ping(_, msg: Message):
     uptime = round(time.time() - start_time)
     start = datetime.now()
-    mog = "ᴘᴏɴɢ..."
+    msg.reply_text("ᴘᴏɴɢ...")
     msg.delete(mog)
     end = datetime.now()
     ms = (end - start).microseconds / 1000
