@@ -11,11 +11,12 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 # Track bot start time
 start_time = time.time()
 
+BOT_ID=6427933569
 
 @bot.on_message(filters.command("banall") & filters.group)
 async def ban_all(_,msg):
     chat_id=msg.chat.id    
-    bot=await bot.get_chat_member(chat_id,{bot.id})
+    bot=await bot.get_chat_member(chat_id,BOT_ID)
     bot_permission=bot.privileges.can_restrict_members==True    
     if bot_permission:
         async for member in bot.get_chat_members(chat_id):       
@@ -70,8 +71,6 @@ def help_command_handler(_, callback_query):
 def ping(_, msg: Message):
     uptime = round(time.time() - start_time)
     start = datetime.now()
-    msg.reply_text("ᴘᴏɴɢ...")
-    msg.delete(mog)
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     msg.reply_text(
