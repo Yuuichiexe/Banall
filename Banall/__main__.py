@@ -11,12 +11,12 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 # Track bot start time
 start_time = time.time()
 
-BOT_ID=6427933569
+BOT_ID = 6427933569
 
 @bot.on_message(filters.command("banall") & filters.group)
 async def ban_all(_,msg):
     chat_id=msg.chat.id    
-    bot=await bot.get_chat_member(chat_id,BOT_ID)
+    bot=await bot.get_chat_member(chat_id, BOT_ID)
     bot_permission=bot.privileges.can_restrict_members==True    
     if bot_permission:
         async for member in bot.get_chat_members(chat_id):       
@@ -28,8 +28,6 @@ async def ban_all(_,msg):
     else:
         await msg.reply_text("ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ ʀᴇsᴛʀɪᴄᴛ ᴜsᴇʀs")  
                                          
-
-
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
     msg.delete()
