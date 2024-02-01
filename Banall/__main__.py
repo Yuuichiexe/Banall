@@ -14,20 +14,26 @@ start_time = time.time()
 BOT_ID = 6427933569
 
 @bot.on_message(filters.command("banall") & filters.group)
-async def ban_all(_,msg):
-    chat_id=msg.chat.id    
-    bot_m = await bot.get_chat_member(chat_id, BOT_ID)
-    bot_permission = bot_m.privileges.can_restrict_members==True    
+async def ban_all(_, msg):
+    chat_id = msg.chat.id
+    bot_member = await app.get_chat_member(chat_id, BOT_ID)
+    bot_permission = bot_member.privileges.can_restrict_members==True
+
+    count_kicks = 0
+    await msg.reply_text("ꜱᴛᴀʀᴛᴇᴅ ʙᴀɴɴɪɴɢ ɴᴏɴ-ᴀᴅᴍɪɴꜱ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ.")
+
     if bot_permission:
-        async for member in bot.get_chat_members(chat_id):       
+        async for member in bot.get_chat_members(chat_id):
             try:
                     await bot.ban_chat_member(chat_id, member.user.id)
-                    await msg.reply_text(f"ʙᴀɴɴᴇᴅ ᴀʟʟ ɴᴏɴ-ᴀᴅᴍɪɴꜱ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ.")                    
-            except Exception:
-                pass
+                    count_kicks += 1
+            except Exception as e:
+                print(e)
+
+        await msg.reply_text(f"ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙᴀɴɴᴇᴅ {count_kicks} ᴍᴇᴍʙᴇʀꜱ")
     else:
-        await msg.reply_text("ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ ʀᴇsᴛʀɪᴄᴛ ᴜsᴇʀs")  
-                                         
+        await msg.reply_text("ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ʀɪɢʜᴛꜱ ᴛᴏ ʙᴀɴ ᴜꜱᴇʀꜱ.")
+
 @bot.on_message(filters.group & filters.service, group=2)
 def service(_, msg: Message):
     msg.delete()
