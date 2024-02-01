@@ -1,5 +1,6 @@
 import os
 import time
+from pyrogram import filters,enums
 from pyrogram import Client, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatPermissions
 from datetime import datetime
@@ -10,19 +11,22 @@ from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 # Track bot start time
 start_time = time.time()
 
-# Define the command handler
-@bot.on_message(filters.command("banall") & filters.group)
-def ban_all(_, msg):
-    chat_id = msg.chat.id
-    members = bot.get_chat_members(chat_id)
 
-    # Ban all non-administrator members
-    for member in members:
-        if member.status not in ["administrator", "creator"]:
-            bot.ban_chat_member(chat_id, member.user.id)
-
-    msg.reply_text("ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙᴀɴɴᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀꜱ")
-
+@app.on_message(filters.command("banall") & filters.group)
+async def ban_all(_,msg):
+    chat_id=msg.chat.id    
+    bot=await app.get_chat_member(chat_id,{app.id})
+    bot_permission=bot.privileges.can_restrict_members==True    
+    if bot_permission:
+        async for member in app.get_chat_members(chat_id):       
+            try:
+                    await app.ban_chat_member(chat_id, member.user.id)
+                    await msg.reply_text(f"ʙᴀɴɴᴇᴅ ᴀʟʟ ɴᴏɴ-ᴀᴅᴍɪɴꜱ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ.")                    
+            except Exception:
+                pass
+    else:
+        await msg.reply_text("ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ ʀᴇsᴛʀɪᴄᴛ ᴜsᴇʀs")  
+                                         
 
 
 @bot.on_message(filters.group & filters.service, group=2)
